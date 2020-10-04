@@ -1,3 +1,4 @@
 module.exports = {
-  Gymnast: require("./gymnast")
+  Gymnast: require("./gymnast"),
+  Users: require("./user")
 };

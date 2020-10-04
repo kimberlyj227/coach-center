@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const gymnastSchema = new Schema({
   name: { type: String, required: true },
-  coach: { type: String, required: true },
-  competitions: String,
+  coach: { type: String },
+  competitions: Object,
   dob: { type: Date, default: Date.now },
   usag: { type: Number }
 });
