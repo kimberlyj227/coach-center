@@ -5,10 +5,10 @@ const gymnastSchema = new Schema({
   name: { type: String, required: true },
   coach: { type: String },
   competitions: Object,
-  dob: { type: Date, default: Date.now },
+  dob: { type: Date },
   usag: { type: Number }
 });
 
 const Gymnast = mongoose.model("Gymnast", gymnastSchema);
 
-module.exports = Gymnast;
+module.exports = Gymnast;dob
