@@ -1,0 +1,33 @@
+//components
+1. jumbo
+2. navbar
+3. sidebar
+4. search bar
+5. table
+
+
+//gymnasts
+1. show all gymnasts
+2. search for gymnasts
+3. edit gymnast info
+4. view chart
+5. view individualized plan
+
+//lesson plan
+1. create new plan
+2. edit plan
+3. delete plan
+
+//annual training plan
+1. input meets, training intensities, etc
+
+//competitions
+1. view schedule
+2. input results
+
+////models
+1. user
+  - lesson plan array
+  - annual plan
+  - gymnasts array
+2. gymnast
