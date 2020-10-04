@@ -11,4 +11,4 @@ const gymnastSchema = new Schema({
 
 const Gymnast = mongoose.model("Gymnast", gymnastSchema);
 
-module.exports = Gymnast;dob
+module.exports = Gymnast;

@@ -1,26 +1,29 @@
-import React from "react";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./pages/Home";
+import User from "./pages/User";
+import Competitions from "./pages/Competitions";
+import LessonPlans from "./pages/LessonPlans";
+import AnnualPlan from "./pages/AnnualPlan";
+import Gymnasts from "./pages/Gymnasts";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import history from "./utils/history";
 
-// The app will not render correctly until you setup a Route component.
-// Refer to the Basic Example documentation if you need to.
-// (https://reacttraining.com/react-router/web/example/basic)
+
 function App() {
   return (
-    <Router>
-      <Nav />
-
-     <Switch>
-        <Route exact path={["/", "/books"]} component={Books} />
-        <Route exact path = "/books/:id" component={Detail} />
-       <Route>
-         <NoMatch day="Friday"/>
-       </Route>
-     </Switch>
-
+    <Router history={history}>
+      <div>
+        <Switch>
+          <Route path = {["/", "/home"]} exact component={Home} />
+          <Route path = "/gymnasts" exact component={Gymnasts} />
+          <Route path = "/lessonplans" exact component={LessonPlans} />
+          <Route path = "/annualplan" exact component={AnnualPlan} />
+          <Route path = "/competitions" exact component={Competitions} />
+          <Route path = "/user" exact component={User} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
     </Router>
   );
 }
