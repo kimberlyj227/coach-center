@@ -2,6 +2,7 @@ import React from "react";
 import {Row, Button, Container} from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from "styled-components";
+import LogIn from "./LogIn";
 
 const LandingWrapper = styled.div`
   height: 100vh;
@@ -13,10 +14,14 @@ const LandingWrapper = styled.div`
     padding: 40px;
     margin: 40px;
     align-items: center;
+    position: absolute;
+    top: 30%;
   }
 
+
   h1, h3, .btn {
-    margin: 0 auto;
+    margin: 20px auto;
+
   }
 
   .btn {
@@ -42,13 +47,7 @@ const Landing = () => {
         <Row>
           <h3>"Failure to plan is planning to fail"</h3>
         </Row>
-        <Row>
-          <Button
-            onClick={() => loginWithRedirect()}
-          >
-            LOGIN TO GET STARTED
-          </Button>
-        </Row>
+        <LogIn/>
       </Container>
     </LandingWrapper>
   )
